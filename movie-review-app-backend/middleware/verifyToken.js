@@ -9,7 +9,7 @@ const verifyToken = async (req, res, next) => {
     return res.status(401).json({ message: "You are not authenticated" });
   }
 
-  const secret = "secretkey";
+  const secret = process.env.SECRET;
 
   jwt.verify(token, secret, (err, user) => {
     if (err) {

@@ -24,9 +24,7 @@ app.use("/admin", adminRoutes);
 const connection = async () => {
   try {
     await mongoose
-      .connect(
-        "mongodb+srv://neel1905:neel1905@cluster0.2mdg4wr.mongodb.net/movie-app?retryWrites=true&w=majority"
-      )
+      .connect(process.env.MONGO)
       .then(console.log("Connected To Database"));
   } catch (error) {
     throw error;
