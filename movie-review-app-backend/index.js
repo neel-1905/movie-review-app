@@ -11,7 +11,12 @@ const adminRoutes = require("./routes/admin");
 const cookieParser = require("cookie-parser");
 
 app.use(express.json());
-app.use(cors({ origin: true, credentials: true }));
+app.use(
+  cors({
+    origin: "https://main--lustrous-unicorn-0ed4b5.netlify.app/",
+    credentials: true,
+  })
+);
 app.use(cookieParser());
 
 // ROUTES
