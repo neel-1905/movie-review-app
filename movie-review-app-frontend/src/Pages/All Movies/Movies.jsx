@@ -8,14 +8,16 @@ const Movies = () => {
   const [data, setData] = useState([]);
   const [country, setCountry] = useState("Any");
   const [genre, setGenre] = useState("Any");
-  const [url, setUrl] = useState(`http://localhost:5000/movies/filterMovies`);
+  const [url, setUrl] = useState(
+    `https://movie-review-app-five.vercel.app/movies/filterMovies`
+  );
 
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
     // console.log(country);
     setUrl(
-      `http://localhost:5000/movies/filterMovies?country=${country}&genre=${genre}`
+      `https://movie-review-app-five.vercel.app/movies/filterMovies?country=${country}&genre=${genre}`
     );
   }, [country, genre]);
 

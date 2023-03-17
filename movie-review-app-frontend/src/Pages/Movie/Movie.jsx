@@ -29,7 +29,7 @@ const Movie = () => {
     console.log(rating);
     try {
       const res = await fetch(
-        `http://localhost:5000/reviews/rateMovie/${user._id}/${location.state.id}`,
+        `https://movie-review-app-five.vercel.app/reviews/rateMovie/${user._id}/${location.state.id}`,
         {
           credentials: "include",
           method: "PUT",
@@ -56,7 +56,7 @@ const Movie = () => {
     (async () => {
       try {
         const res = await fetch(
-          `http://localhost:5000/movies/getMovie/${location.state.id}`,
+          `https://movie-review-app-five.vercel.app/movies/getMovie/${location.state.id}`,
           {
             headers: {
               "Content-Type": "application/json",
@@ -79,8 +79,8 @@ const Movie = () => {
     (async () => {
       try {
         const res = await fetch(
-          // `http://localhost:5000/reviews/getRating/${location.state.id}/${user._id}`,
-          `http://localhost:5000/reviews/getRating/${location.state.id}/${user._id}`,
+          // `https://movie-review-app-five.vercel.app/reviews/getRating/${location.state.id}/${user._id}`,
+          `https://movie-review-app-five.vercel.app/reviews/getRating/${location.state.id}/${user._id}`,
           {
             credentials: "include",
             headers: {
@@ -103,7 +103,7 @@ const Movie = () => {
   //   (async () => {
   //     try {
   //       const res = await fetch(
-  //         `http://localhost:5000/reviews/rateMovie/${user._id}/${location.state.id}`,
+  //         `https://movie-review-app-five.vercel.app/reviews/rateMovie/${user._id}/${location.state.id}`,
   //         {
   //           credentials: "include",
   //           method: "PUT",

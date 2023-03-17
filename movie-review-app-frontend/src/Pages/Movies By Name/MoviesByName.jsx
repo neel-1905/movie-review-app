@@ -16,14 +16,14 @@ const MoviesByName = () => {
   const movieName = location.state.movieName;
 
   // const { data, loading, error, reFetch } = useFetch(
-  //   `http://localhost:5000/movies/findByName?name=${movieName}`
+  //   `https://movie-review-app-five.vercel.app/movies/findByName?name=${movieName}`
   // );
 
   useEffect(() => {
     (async () => {
       try {
         const res = await fetch(
-          `http://localhost:5000/movies/findByName?name=${movieName}`,
+          `https://movie-review-app-five.vercel.app/movies/findByName?name=${movieName}`,
           {
             headers: {
               "Content-Type": "application/json",

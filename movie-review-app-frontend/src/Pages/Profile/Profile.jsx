@@ -26,7 +26,7 @@ const Profile = () => {
     (async () => {
       try {
         const res = await fetch(
-          `http://localhost:5000/users/getOneUser/${user._id}`,
+          `https://movie-review-app-five.vercel.app/users/getOneUser/${user._id}`,
           {
             credentials: "include",
             headers: {
@@ -46,7 +46,7 @@ const Profile = () => {
   const handleEditSubmit = async () => {
     try {
       const res = await fetch(
-        `http://localhost:5000/users/updateUser/${user._id}`,
+        `https://movie-review-app-five.vercel.app/users/updateUser/${user._id}`,
         {
           credentials: "include",
           method: "PUT",
@@ -72,7 +72,7 @@ const Profile = () => {
   const handlePasswordEdit = async () => {
     try {
       const res = await fetch(
-        `http://localhost:5000/users/updatePassword/${user._id}`,
+        `https://movie-review-app-five.vercel.app/users/updatePassword/${user._id}`,
         {
           credentials: "include",
           method: "PUT",

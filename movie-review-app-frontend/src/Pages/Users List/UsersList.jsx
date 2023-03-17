@@ -13,12 +13,15 @@ const UsersList = () => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch(`http://localhost:5000/users/getAllUsers`, {
-          credentials: "include",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+        const res = await fetch(
+          `https://movie-review-app-five.vercel.app/users/getAllUsers`,
+          {
+            credentials: "include",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
 
         const formatRes = await res.json();
         setData(formatRes);
@@ -33,7 +36,7 @@ const UsersList = () => {
   const handleUserDelete = async (userId) => {
     try {
       const res = await fetch(
-        `http://localhost:5000/users/deleteUser/${userId}`,
+        `https://movie-review-app-five.vercel.app/users/deleteUser/${userId}`,
         {
           credentials: "include",
           method: "DELETE",

@@ -14,7 +14,7 @@ const Reviews = ({ movieId }) => {
   // const [openModal, setOpenModal] = useState(false);
 
   // const { data, loading, error } = useFetch(
-  //   `http://localhost:5000/reviews/getMovieReviews/${movieId}`
+  //   `https://movie-review-app-five.vercel.app/reviews/getMovieReviews/${movieId}`
   // );
 
   const setUser = JSON.parse(localStorage.getItem("user"));
@@ -23,7 +23,7 @@ const Reviews = ({ movieId }) => {
     (async () => {
       try {
         const res = await fetch(
-          `http://localhost:5000/reviews/getMovieReviews/${movieId}`,
+          `https://movie-review-app-five.vercel.app/reviews/getMovieReviews/${movieId}`,
           {
             headers: {
               "Content-Type": "application/json",
@@ -44,7 +44,7 @@ const Reviews = ({ movieId }) => {
   const handleReviewSubmit = async (review) => {
     try {
       const res = await fetch(
-        `http://localhost:5000/reviews/postReview/${setUser._id}/${movieId}`,
+        `https://movie-review-app-five.vercel.app/reviews/postReview/${setUser._id}/${movieId}`,
         {
           credentials: "include",
           method: "POST",
@@ -69,7 +69,7 @@ const Reviews = ({ movieId }) => {
   const handleDelete = async (reviewId) => {
     try {
       const res = await fetch(
-        `http://localhost:5000/reviews/deleteReview/${reviewId}/${movieId}/${setUser._id}`,
+        `https://movie-review-app-five.vercel.app/reviews/deleteReview/${reviewId}/${movieId}/${setUser._id}`,
         {
           credentials: "include",
           method: "DELETE",

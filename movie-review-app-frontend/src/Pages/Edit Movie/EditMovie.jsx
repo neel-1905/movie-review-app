@@ -30,7 +30,7 @@ const EditMovie = () => {
     (async () => {
       try {
         const res = await fetch(
-          `http://localhost:5000/movies/getMovie/${params.movieId}`,
+          `https://movie-review-app-five.vercel.app/movies/getMovie/${params.movieId}`,
           {
             headers: {
               "Content-Type": "application/json",
@@ -52,7 +52,7 @@ const EditMovie = () => {
   const handleUpdateMovie = async () => {
     try {
       const res = await fetch(
-        `http://localhost:5000/movies//editMovie/${params.movieId}`,
+        `https://movie-review-app-five.vercel.app/movies//editMovie/${params.movieId}`,
         {
           credentials: "include",
           method: "PUT",

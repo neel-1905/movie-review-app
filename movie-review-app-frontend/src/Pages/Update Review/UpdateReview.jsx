@@ -17,7 +17,7 @@ const UpdateReview = () => {
     (async () => {
       try {
         const res = await fetch(
-          `http://localhost:5000/reviews/getOne/${params.id}`,
+          `https://movie-review-app-five.vercel.app/reviews/getOne/${params.id}`,
           {
             credentials: "include",
             method: "GET",
@@ -35,7 +35,7 @@ const UpdateReview = () => {
   const handleUpdate = async () => {
     try {
       const res = await fetch(
-        `http://localhost:5000/reviews/updateReview/${params.id}/${user._id}`,
+        `https://movie-review-app-five.vercel.app/reviews/updateReview/${params.id}/${user._id}`,
         {
           credentials: "include",
           method: "PUT",

@@ -13,17 +13,20 @@ const Register = () => {
 
   const handleRegistration = async () => {
     try {
-      const res = await fetch("http://localhost:5000/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          username: registerDetails?.username,
-          email: registerDetails?.email,
-          password: registerDetails?.password,
-        }),
-      });
+      const res = await fetch(
+        "https://movie-review-app-five.vercel.app/auth/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username: registerDetails?.username,
+            email: registerDetails?.email,
+            password: registerDetails?.password,
+          }),
+        }
+      );
 
       const formatRes = await res.json();
       alert(formatRes?.message);

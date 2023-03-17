@@ -8,11 +8,14 @@ const Featured = () => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch("http://localhost:5000/movies/getSome", {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+        const res = await fetch(
+          "https://movie-review-app-five.vercel.app/movies/getSome",
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
 
         const formatRes = await res.json();
 

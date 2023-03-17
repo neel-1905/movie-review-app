@@ -32,7 +32,7 @@ const Login = () => {
     dispatch({ type: "LOGIN" });
     try {
       const res = await axios.post(
-        "http://localhost:5000/auth/login",
+        "https://movie-review-app-five.vercel.app/auth/login",
         loginDetails,
         { withCredentials: true }
       );

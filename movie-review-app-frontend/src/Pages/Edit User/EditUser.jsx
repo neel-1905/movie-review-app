@@ -24,8 +24,8 @@ const EditUser = () => {
     (async () => {
       try {
         const res = await fetch(
-          //   `http://localhost:5000/users/getOneUser/${location.state.id}`,
-          `http://localhost:5000/admin/getEditUser/${location.state.id}/${user._id}`,
+          //   `https://movie-review-app-five.vercel.app/users/getOneUser/${location.state.id}`,
+          `https://movie-review-app-five.vercel.app/admin/getEditUser/${location.state.id}/${user._id}`,
           {
             credentials: "include",
             headers: {
@@ -54,7 +54,7 @@ const EditUser = () => {
   const handleEditUser = async () => {
     try {
       const res = await fetch(
-        `http://localhost:5000/admin/editUser/${location.state.id}/${user._id}`,
+        `https://movie-review-app-five.vercel.app/admin/editUser/${location.state.id}/${user._id}`,
         {
           credentials: "include",
           method: "PUT",

@@ -14,12 +14,15 @@ const ListMovies = () => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch(`http://localhost:5000/movies/getAll`, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+        const res = await fetch(
+          `https://movie-review-app-five.vercel.app/movies/getAll`,
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
 
         const formatRes = await res.json();
         setMovies(formatRes);
@@ -33,7 +36,7 @@ const ListMovies = () => {
     try {
       console.log(movieId);
       const res = await fetch(
-        `http://localhost:5000/movies/deleteMovie/${movieId}`,
+        `https://movie-review-app-five.vercel.app/movies/deleteMovie/${movieId}`,
         {
           credentials: "include",
           method: "DELETE",

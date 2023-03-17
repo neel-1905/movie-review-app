@@ -35,22 +35,25 @@ const AddMovie = () => {
 
   const handleAddMovie = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/movies/createMovie`, {
-        credentials: "include",
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          title: movieDetails?.title,
-          cast: movieDetails?.cast,
-          genre: genre,
-          country: country,
-          description: movieDetails?.description,
-          releaseDate: date,
-          duration: movieDetails?.duration,
-        }),
-      });
+      const res = await fetch(
+        `https://movie-review-app-five.vercel.app/movies/createMovie`,
+        {
+          credentials: "include",
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            title: movieDetails?.title,
+            cast: movieDetails?.cast,
+            genre: genre,
+            country: country,
+            description: movieDetails?.description,
+            releaseDate: date,
+            duration: movieDetails?.duration,
+          }),
+        }
+      );
 
       const formatRes = await res.json();
 

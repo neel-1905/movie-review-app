@@ -24,19 +24,22 @@ const AddUser = () => {
 
   const handleAddUser = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/admin/addUser`, {
-        credentials: "include",
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          username: userData?.username,
-          email: userData?.email,
-          password: userData?.password,
-          isAdmin: radio,
-        }),
-      });
+      const res = await fetch(
+        `https://movie-review-app-five.vercel.app/admin/addUser`,
+        {
+          credentials: "include",
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username: userData?.username,
+            email: userData?.email,
+            password: userData?.password,
+            isAdmin: radio,
+          }),
+        }
+      );
       const formatRes = await res.json();
       alert(formatRes?.message);
       if (formatRes?.message == "New user added") {
