@@ -1,0 +1,19 @@
+.nav {
+  /* position: absolute; */
+  z-index: 100;
+  width: 100%;
+  background-color: #18122b;
+}
+
+.login {
+  padding-left: 0px !important;
+}
+
+.nav-link {
+  color: white;
+}
+
+.search {
+  background-color: #144272 !important;
+  color: white;
+}

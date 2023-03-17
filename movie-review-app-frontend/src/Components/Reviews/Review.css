@@ -1,0 +1,21 @@
+.reviewContainer {
+  background-color: #393053;
+}
+
+.reviewUsername {
+  margin-bottom: 0px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.reviewDate {
+  font-size: 12px;
+}
+
+.reviewText {
+  font-weight: 500;
+}
+
+/* .reviewsDiv {
+  position: relative;
+} */

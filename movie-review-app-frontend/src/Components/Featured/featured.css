@@ -1,0 +1,18 @@
+.card {
+  height: 300px;
+}
+
+.featuredImg {
+  width: 100%;
+  overflow: hidden;
+}
+
+.featuredLink {
+  text-decoration: none;
+  color: #144272;
+  font-weight: 700;
+}
+
+.featuredBottom {
+  font-size: 14px;
+}
