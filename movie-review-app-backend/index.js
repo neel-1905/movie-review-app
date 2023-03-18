@@ -52,7 +52,7 @@ mongoose.connection.on("connected", () => {
   console.log("mongoDb connected");
 });
 
-app.listen(port, async () => {
+app.listen(process.env.PORT || port, async () => {
   connection();
   console.log(`App started on port ${port}`);
 });
