@@ -11,7 +11,7 @@ const adminRoutes = require("./routes/admin");
 const cookieParser = require("cookie-parser");
 
 app.use(express.json());
-app.use(express.urlencoded({ limit: "15mb" }));
+app.use(express.urlencoded({ extended: true, limit: "15mb" }));
 app.use(
   cors({
     // origin: "https://moviereview-app-frontend.netlify.app/",
@@ -30,6 +30,9 @@ app.use("/movies", movieRoutes);
 app.use("/reviews", reviewRoutes);
 app.use("/users", userRoutes);
 app.use("/admin", adminRoutes);
+app.use("*", (req, res) => {
+  return res.status(404).json({ message: "Route not found" });
+});
 
 const connection = async () => {
   try {
