@@ -38,6 +38,9 @@ const connection = async () => {
   try {
     await mongoose
       .connect(process.env.MONGO)
+      // .connect(
+      //   "mongodb+srv://neel1905:neel1905@cluster0.2mdg4wr.mongodb.net/movie-app?retryWrites=true&w=majority"
+      // )
       .then(console.log("Connected To Database"));
   } catch (error) {
     throw error;
